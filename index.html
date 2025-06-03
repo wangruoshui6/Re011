@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        
+        }
+        .flex{
+            display: flex;
+        }
+        .flex1{
+            flex:1;    /*主区域要占据除侧边栏的所有区域*/
+            
+        }
+        .left{
+            width: 200px;
+            background-color: white;
+        }
+        .baiSe{
+            background-color: white;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .yinYing {
+box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px
+}
+    img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding: 10px;
+         border-right: 1px solid #000;
+    }
+    .flext{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+    .nav{
+        padding: 10px 20px ;
+        border-bottom: 1px solid rgb(157, 157, 157);
+        font-size: 18px;
+        color: #666;
+    }
+    /* 当屏幕宽度小于600px的时候要改变的css */
+    @media (max-width:600px) {
+        .ceBian{
+            display: none;
+        }
+        .neiRong{
+            flex-direction: column;
+        }
+        .shuJuQu{
+            flex-direction: column;
+        }
+        .shuJu{
+            margin: 0 0 8px;
+            flex: auto;
+        }
+    }
+    </style>
+</head>
+<body class="flex mg8">
+    <!-- 左侧边栏 -->
+     <div style="z-index: 1;" class="left mgr8">
+        <!-- 头像栏 -->
+         <div class="flext">
+            <img src="./images/头像.jpg" alt="">
+            <div style="margin-left: 10px; font-size: 20px;">王若水</div>
+         </div>
+         <!-- 导航栏 -->
+         <div class="flex1">
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            
+         
+         </div>
+     </div>
+     <!-- 主边栏 -->
+      <div class="flex1 flex column">
+        <!-- 头部 -->
+        <div style="height: 60px;background-color: white;z-index: 1;" class="yinYing"></div>
+        <!-- 内容区 -->
+         <div style="overflow: auto;" class="flex1 flex neiRong">
+            <div style="flex: 3;" class="column mgt8 mgr8">
+                <div style="height: 200px;" class="flex shuJuQu">
+                    <div style="height: 200px;flex: 1; background-color: white;" class="mgr8 yinYing"></div>
+                    <div style="height: 200px;flex: 1; background-color: white;"class="mgr8 yinYing"></div>
+                    <div style="height: 200px;flex: 1; background-color: white;"class="mgr8 yinYing"></div>
+                    <div style="height: 200px;flex: 1; background-color: white;" class="yinYing"></div>
+                   
+                    
+                </div>
+                <div class="flex1 column yinYing shuJuQu" >
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                       <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                       <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                    <div style="height: 160px;" class="shuJu mgt8 baiSe yinYing"></div>
+                </div>
+            </div>
+            <div style="flex: 1;" class="mgt8">
+                <div style="height: 150px; background-color: white;" class="flex column yinYing"></div>
+                 <div style="height: 300px;background-color: white;" class="mgt8 yinYing"></div>
+            </div>
+
+         </div>
+        </div>
+      </div>
+</body>
+</html>
